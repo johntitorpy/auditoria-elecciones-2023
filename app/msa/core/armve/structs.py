@@ -5,4 +5,5 @@ struct_tag_header = Struct("tag_header",
 struct_tag = Struct("tag",
                     Embed(struct_tag_header),
                     Bytes("crc32", 4),
+                    Bytes("timestamp", 4),
                     Bytes("user_data", lambda ctx: ctx.size))
