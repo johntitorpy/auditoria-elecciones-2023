@@ -26,4 +26,8 @@ En la mesa en cuestion, se tienen 389 votos y se tiene registrada la hora de rec
 
 
 # Una posible correción
+En la computación es regular utilizar un "timestamp" (marca de tiempo), en este caso es posible agregar un "timestamp" a la structura de datos llamada "struct_tag".
+
+El campo "user_data" contiene los datos de la votación en cuestion, es considerado un PII (Personal Identifiable Information) en español información personal identificable, este campo es encriptado con una llave que se genera utilizando el chip del presidente de la mesa.
+
 [WIP - Add timetamp in the tag](https://github.com/johntitorpy/auditoria-elecciones-2023/pull/1#issue-1708809248)
