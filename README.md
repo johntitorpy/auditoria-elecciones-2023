@@ -1,3 +1,8 @@
+# Histórico de eventos
+Desde el conteo de los votos dentro del TSJE (Tribunal Superior de Justicia Electoral), se han detectado patrones e impugnado mesas, entendiendo como buscar estos patrones procedimos a crear una base de datos postgres y utilizar sql para analizar los datos.
+
+En el proceso de analizar los datos, se vió necesario la apertura del sobre 4 para las mesas que detectamos, necesitamos ver el patron de la duracion del tiempo de cada votación, de lo contrario es vulnerable a que las autoridades de mesa hayan generado esos votos artificiales.
+
 # Datos de la mesa
 Departamento: 11
 
@@ -7,12 +12,18 @@ Zona: 0
 
 Local: 11
 
-Mesa 2
+Mesa: 2
 
 # Analisis
-Hemos detectado una vulnerabilidad de seguridad del software, con la cual es posible la carga de votos con la complicidad de las autoridades de la mesa, esto es posible debido a que el software tiene una falla que no registra la fecha y la hora de cada boleta al momento de crear el voto.
-En la mesa en cuestion, se tienen 389 votos y se tiene registrada la hora de recepcion del TREP a las 2023-04-30 19:32:04, en el dia de la votacion se pudo observar que no era humanamente posible votar en menos de 3 minutos, 389 votos requieren aproximadamente 19 horas de votacion.
-Hemos auditado el codigo fuente y llegamos a la conclusion de que no existe ninguna rutina o variable asignada que contenga la fecha y la hora del voto en su respectiva boleta, por eso necesitamos la apertura del sobre 4 para auditar el contenido de las boletas y verificar que las mismas no contienen la fecha y la hora grabadas en el chip RFID de las boletas.
+Hemos detectado que teniendo la complicidad de las autoridades de mesa, es posible generar votos, también hemos verficado que el software de las urnas no guarda la fecha y la hora de cada voto.
+
+En la mesa en cuestion, se tienen 389 votos y se tiene registrada la hora de recepcion del TREP (Transmision de Resultados Electorales Pre-eliminares) a las 2023-04-30 19:32:04, en el dia de la votacion se pudo observar que no era humanamente posible votar en menos de 3 minutos, 389 votos requieren aproximadamente 19 horas de votacion.
+
+# Que necesitamos?
+1 - Necesitamos ayuda de voluntarios que puedan confirmar que el software de las elecciones no registra la fecha y la hora de cada voto.
+
+2 - Necesitamos ayuda para difundir el mensaje y explicar a la población que este sistema tiene una falla que permite la creación de votos artificiales.
+
 
 # Una posible correción
 [WIP - Add timetamp in the tag](https://github.com/johntitorpy/auditoria-elecciones-2023/pull/1#issue-1708809248)
