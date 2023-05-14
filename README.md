@@ -1,7 +1,7 @@
 # Histórico de eventos
 Desde el conteo de los votos dentro del TSJE (Tribunal Superior de Justicia Electoral), se han detectado patrones e impugnado mesas, entendiendo como buscar estos patrones procedimos a crear una base de datos postgres y utilizar sql para analizar los datos.
 
-En el proceso de analizar los datos, se vió necesario la apertura del sobre 4 para las mesas que detectamos, necesitamos ver el patron de la duracion del tiempo de cada votación, de lo contrario es vulnerable a que las autoridades de mesa hayan generado esos votos artificiales.
+En el proceso de analizar los datos, se vió necesario la apertura del sobre 4 para las mesas que detectamos, necesitamos ver el patron de la duracion del tiempo de cada votación, de lo contrario es vulnerable a que las autoridades de mesa hayan generado esos votos de forma artificial.
 
 # Datos de la mesa
 Departamento: 11
