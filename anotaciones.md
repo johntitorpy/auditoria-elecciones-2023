@@ -13,7 +13,7 @@ struct_tag = Struct("tag",
 
 ```
 
-Los datos del voto se guardan dentro del campo "user_data", inicialmente no hemos encontrado evidencia de que la fecha y hora del voto existen dentro del campo "user_data", de esta forma concluimos que existe una vulnerabilidad de seguridad, debido a que no es posible auditar la fecha y hora de cada voto, abriendo una brecha donde en ciertas mesas existen mas de 389 votos cuyos certificados TREP estan registrados en horarios que no cierran con la cantidad de votos de la mesa y el tiempo que llevaria tener esos votos, luego hacer el escrutinio y por ultimo enviar los certificados de resultado al sistema TREP.
+Los datos del voto se guardan dentro del campo "user_data", inicialmente no hemos encontrado evidencia de que la fecha y hora del voto existen dentro del campo "user_data", tampoco se puede ver en el header "struct_tag_header", de esta forma concluimos que existe una vulnerabilidad de seguridad, debido a que no es posible auditar la fecha y hora de cada voto, abriendo una brecha donde en ciertas mesas existen mas de 389 votos cuyos certificados TREP estan registrados en horarios que no cierran con la cantidad de votos de la mesa y el tiempo que llevaria tener esos votos, luego hacer el escrutinio y por ultimo enviar los certificados de resultado al sistema TREP.
 
 # Apertura
 app/msa/modulos/sufragio/__init__.py
