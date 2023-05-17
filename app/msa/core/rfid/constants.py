@@ -1,0 +1,131 @@
+# -*- coding: utf-8 -*-
+"""
+Descripcion
+========================
+Contiene las constantes que identifican los tipos de tags.
+
+.. data:: TAGS_ADMIN
+
+    tuple: contiene los tipos :const:`~TAG_PRESIDENTE_MESA` y :const:`~TAG_CAPACITACION`
+
+.. _core.rfid.constants.tipo_tags:
+
+Tipo Tags
+-------------------------
+
+.. data:: TAG_RECUENTO
+.. data:: TAG_APERTURA
+.. data:: TAG_COLISION
+
+.. data:: TAG_CAPACITACION
+.. data:: TAG_PRESIDENTE_MESA
+
+.. data:: TAG_VOTO
+.. data:: TAG_USUARIO_MSA
+.. data:: TAG_PRESIDENTE
+.. data:: TAG_RECUENTO
+.. data:: TAG_APERTURA
+.. data:: TAG_CAPACITACION
+.. data:: TAG_VIRGEN
+.. data:: TAG_DESCONOCIDO
+.. data:: NO_TAG
+.. data:: TAG_VACIO
+.. data:: TAG_DATOS
+.. data:: TAG_ADMIN
+.. data:: TAG_ERROR
+.. data:: TAG_COLISION
+.. data:: TAG_NO_ENTRA
+
+"""
+
+from __future__ import absolute_import
+from six.moves import zip
+
+TAG_VOTO = 'TAG_VOTO'
+TAG_USUARIO_MSA = 'TAG_USUARIO_MSA'
+TAG_PRESIDENTE_MESA = 'TAG_PRESIDENTE_MESA'
+TAG_RECUENTO = 'TAG_RECUENTO'
+TAG_PRUEBA_CTX = 'TAG_PRUEBA_CTX'
+TAG_PRUEBA_EQUIPO = 'TAG_PRUEBA_EQUIPO'
+TAG_APERTURA = 'TAG_APERTURA'
+TAG_CAPACITACION = 'TAG_CAPACITACION'
+TAG_VIRGEN = 'TAG_VIRGEN'
+TAG_DESCONOCIDO = 'TAG_DESCONOCIDO'
+
+TAGS_ADMIN = (TAG_PRESIDENTE_MESA, TAG_CAPACITACION)
+
+CLASE_ICODE = 'ICODE'
+CLASE_ICODE2 = 'ICODE2'
+CLASE_MIFARE = 'MIFARE'
+
+TIPO_NXP_SLI_L = "SLI-L"
+TIPO_NXP_SLIX = "SLIX"
+TIPO_NXP_SLIX2 = "SLIX2"
+TIPO_ST_25TV02KC = "25TV02KC"
+
+COD_TIPOS_NXP = {
+    16: TIPO_NXP_SLIX,
+    8: TIPO_NXP_SLIX2,
+}
+
+COD_TIPOS_ST = {
+    8: TIPO_ST_25TV02KC,
+}
+
+CANT_BLOQUES = {
+    TIPO_NXP_SLI_L: 8,
+    TIPO_NXP_SLIX: 28,
+    TIPO_NXP_SLIX2: 79,
+    TIPO_ST_25TV02KC: 80,
+}
+
+MAX_SIZE = {
+    TIPO_NXP_SLIX2: (CANT_BLOQUES[TIPO_NXP_SLIX2]-2)*4,
+    TIPO_NXP_SLIX: (CANT_BLOQUES[TIPO_NXP_SLIX]-2)*4,
+    TIPO_ST_25TV02KC: (CANT_BLOQUES[TIPO_ST_25TV02KC]-2)*4,
+}
+"""
+Máxima cantidad de bytes que se pueden guardar en el tag luego del header. 
+
+SLIX2: 79 bloques - (1 tag header + 1 bloque de CRC32)
+SLIX1: 28 bloques - (1 tag header + 1 bloque de CRC32)
+"""
+
+NO_TAG = 'sin tag'
+TAG_VACIO = 'tag vacio'
+TAG_DATOS = 'tag con datos'
+TAG_ADMIN = 'tag admin'
+TAG_ERROR = 'error en tag'
+TAG_COLISION = 'colision al leer tag'
+CNX_ERROR = u'error de conexión'
+TAG_NO_ENTRA = u'HLQP'
+
+COD_TAG_VACIO = 0
+COD_TAG_VOTO = 1
+COD_TAG_USUARIO_MSA = 2
+COD_TAG_PRESIDENTE_MESA = 3
+COD_TAG_RECUENTO = 4
+COD_TAG_APERTURA = 5
+COD_TAG_CAPACITACION = 6
+COD_TAG_VIRGEN = 7
+COD_TAG_PRUEBA_CTX = 8
+COD_TAG_PRUEBA_EQUIPO = 9
+COD_TAG_DESCONOCIDO = 255
+COD_TAG_NO_ENTRA = 69
+
+TIPOS_TAGS = {
+    COD_TAG_VACIO: TAG_VACIO,
+    COD_TAG_VOTO: TAG_VOTO,
+    COD_TAG_USUARIO_MSA: TAG_USUARIO_MSA,
+    COD_TAG_PRESIDENTE_MESA: TAG_PRESIDENTE_MESA,
+    COD_TAG_RECUENTO: TAG_RECUENTO,
+    COD_TAG_PRUEBA_CTX: TAG_PRUEBA_CTX,
+    COD_TAG_PRUEBA_EQUIPO: TAG_PRUEBA_EQUIPO,
+    COD_TAG_APERTURA: TAG_APERTURA,
+    COD_TAG_CAPACITACION: TAG_CAPACITACION,
+    COD_TAG_VIRGEN: TAG_VIRGEN,
+    COD_TAG_DESCONOCIDO: TAG_DESCONOCIDO,
+    COD_TAG_NO_ENTRA: TAG_NO_ENTRA
+}
+
+TIPOS_TAGS_REV = dict(list(zip(list(TIPOS_TAGS.values()), list(TIPOS_TAGS.keys()))))

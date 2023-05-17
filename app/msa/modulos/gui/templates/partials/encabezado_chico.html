@@ -1,0 +1,19 @@
+<div id="logo_eleccion">
+    <img class="logo-eleccion" src="img/logo_eleccion.png" />
+</div>
+{{#if mostrar_ubicacion}}
+<div id="datos_ubicacion">
+    <div class="label" id="_txt_l_eleccion">Elección: <span id="_txt_pais"></span></div>
+    <div class="label" id="_txt_l_distrito">Departamento: <span id="_txt_distrito"></span></div>
+    <div class="label" id="_txt_l_departamento">Distrito: <span id="_txt_departamento"></span></div>
+    <div class="label" id="_txt_l_localidad">Zona: <span id="_txt_localidad"></span></div>
+    <div class="label" id="_txt_l_establecimiento">Local: <span id="_txt_establecimiento"></span></div>
+
+</div>
+{{else}}
+<p id="datos_eleccion">
+    <b id="_txt_titulo"></b> -
+    <span id="_txt_fecha"></span> - 
+    <span id="_txt_entidad"></span><br>
+</p>
+{{/if}}

@@ -1,0 +1,39 @@
+<div id="pantalla_mesaypin" class="ingreso">
+    <div class="id_mesa_y_pin">
+        <div id="id_unico_mesa">
+            <div>
+                <label id="_txt_ingrese_id_unico_mesa"></label>
+                <input type="text" name="id_unico"  pattern="{{pattern_id_unico}}" data-orden=1 data-keyboard="qwerty">
+                <label id="_txt_ingrese_numero_mesa"></label>
+                <input type="text" class="nro_mesa" name="nro_mesa" data-orden=2 pattern="{{pattern_mesa}}"
+                    value="{{mesa}}" data-keyboard="qwerty" />
+            </div>
+            <div>
+                <p id="texto_ayuda"></p>
+            </div>
+        </div>
+        <div id="id_mesa_pin">
+            <label id="_txt_ingrese_numero_pin"></label>
+            <input type="text" class="nro_pin" name="nro_pin_1" pattern="{{pattern_pin}}" maxlength=3 data-orden=3 data-keyboard="qwerty"/>
+            <span class="guion">-</span>
+            <input type="text" class="nro_pin" maxlength=3 name="nro_pin_2" pattern="{{pattern_pin}}" data-orden=4 data-keyboard="qwerty"/>
+            <span class="guion">-</span>
+            <input type="text" class="nro_pin" maxlength=3 name="nro_pin_3" pattern="{{pattern_pin}}" data-orden=5 data-keyboard="qwerty"/>
+            <div class="clear"></div>
+        </div>
+    </div>
+    {{#if mostrar_tooltip}}
+        <div class="tooltip">
+            <div class="contenido_tooltip">
+                {{#if mostrar_imagen}}
+                <div id="svg_apertura"></div>
+                <p id="_txt_acerque_acta_apertura"></p>
+                {{else}}
+                <div id="svg_cierre"></div>
+                <p class="texto-chico" id="_txt_acerque_acta_cierre"></p>
+                {{/if}}
+            </div>
+        </div>
+    {{/if}}
+    {{> teclado}}
+</div>

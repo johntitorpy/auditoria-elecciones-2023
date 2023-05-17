@@ -1,0 +1,119 @@
+<article class="cargo_con_preferentes">
+	<header class="cargo_con_preferentes-header">
+		<div class="contenedor-boton-izquierda">
+			<div class="scroll-izquierda">
+				<p>&#xe314;</p>
+			</div>
+		</div>
+		<p class="cargo-text"></p>
+		<div class="contenedor-boton-derecha">
+			<div class="scroll-derecha">
+				<p>&#xe315;</p>
+			</div>
+		</div>
+	</header>
+	<div class="contenedor-scroll arriba">
+		<div class="scroll-arriba">
+			<p>&#xE5C7;</p>
+		</div>
+	</div>
+	<main class="cargo_con_preferentes-main">
+		{{#each filas_preferentes}}
+			<div class="cargos-preferentes" data-cargo="{{id}}" display="block">
+
+				{{#if multitable}}
+
+					<div class="candidato-preferentes">
+						<table class="detalle-preferentes">
+							<thead>
+								<tr>
+									<th scope="row">Li/Opc</th>
+									
+									{{#each nros_orden.nros_orden_menor}}
+										<th>
+											{{this}}
+										</th>
+									{{/each}}																	
+								</tr>
+							</thead>
+							<tbody>
+								{{#each listas_para_matriz}}
+									<tr>
+										<th>{{this.nro_lista}}</th>
+										{{#each this.votos.arr_matriz_menor}}
+											<td class={{this.resaltado}}>{{this.voto}}</td>
+										{{/each}}
+									</tr>
+								{{/each}}							
+							</tbody>
+						</table>						
+					</div>				
+
+
+
+					<div class="candidato-preferentes">
+						<table class="detalle-preferentes">
+							<thead>
+								<tr>
+									<th scope="row">Li/Opc</th>
+									
+									{{#each nros_orden.nros_orden_mayor}}
+										<th>
+											{{this}}
+										</th>
+									{{/each}}																	
+								</tr>
+							</thead>
+							<tbody>
+								{{#each listas_para_matriz}}
+									<tr>
+										<th>{{this.nro_lista}}</th>
+										{{#each this.votos.arr_matriz_mayor}}
+											<td class={{this.resaltado}}>{{this.voto}}</td>
+										{{/each}}
+									</tr>
+								{{/each}}							
+							</tbody>
+						</table>						
+					</div>	
+
+					{{else}}
+
+						<div class="candidato-preferentes">
+							<table class="detalle-preferentes">
+								<thead>
+									<tr>
+										<th scope="row">Li/Opc</th>
+										
+										{{#each nros_orden}}
+											<th>
+												{{this}}
+											</th>
+										{{/each}}																	
+									</tr>
+								</thead>
+								<tbody>
+									{{#each listas_para_matriz}}
+											<tr>
+												<th>{{this.nro_lista}}</th>
+													{{#each this.votos}}											
+													<td class={{this.resaltado}}>{{this.voto}}</td>												
+												{{/each}}	
+											</tr>
+									{{/each}}							
+								</tbody>
+							</table>						
+						</div>				
+					{{/if}}
+
+			</div>
+		{{/each}}
+			
+	</main>
+	<div class="contenedor-scroll abajo">
+		<div class="scroll-abajo">
+			<p>&#xE5C5;</p>
+		</div>
+	</div>
+
+</article>

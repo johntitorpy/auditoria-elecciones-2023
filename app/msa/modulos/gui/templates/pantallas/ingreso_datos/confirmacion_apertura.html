@@ -1,0 +1,49 @@
+<div id="pantalla_confirmaciondatos" class="mensaje">
+    <section class="panel-texto-confirmacion">
+        <header class="confirmacion_header">
+            <img class="confirmacion_header__imagen" alt="logo elección"
+                 src="img/logo_paraguay_blanco_negro_sin_letras.png">
+            <h2 class="confirmacion_header__titulo">{{titulo}}</h2>
+        </header>
+        <p class="confirmacion_message">
+            Por favor, verifique que los datos de la mesa sean los correctos:
+        </p>
+        <dl class="confirmacion_datosmesa">
+            <div class="confirmacion_datosmesa__item">
+                <dt>ELECCIÓN:</dt>
+                <dd>{{eleccion}}</dd>
+            </div>
+            <div class="confirmacion_datosmesa__item">
+                <dt>DEPARTAMENTO:</dt>
+                <dd>{{departamento}}</dd>
+            </div>
+            <div class="confirmacion_datosmesa__item">
+                <dt>DISTRITO:</dt>
+                <dd>{{distrito}}</dd>
+            </div>
+            <div class="confirmacion_datosmesa__item">
+                <dt>ZONA:</dt>
+                <dd>{{zona}}</dd>
+            </div>
+            <div class="confirmacion_datosmesa__item">
+                <dt>LOCAL:</dt>
+                <dd>{{local}}</dd>
+            </div>
+            <div class="confirmacion_datosmesa__item">
+                <dt>MESA:</dt>
+                <dd>{{mesa}}</dd>
+            </div>
+        </dl>
+    </section>
+
+    <div class="clear"></div>
+    <div class="acciones" id="acciones">
+        <div id="_txt_cancelar" class="action-button cancelar"></div><div id="_txt_confirmar" class="action-button aceptar"></div>
+    </div>
+    <div class="acciones" id="imprimiendo" style="display:none">
+        <h1 class="texto-imprimiendo" id="_txt_mensaje_imprimiendo"></h1>
+    </div>
+    <div class="acciones" id="otra_acta" style="display:none">
+        <h1 class="texto-imprimiendo" id="_txt_introduzca_otra_apertura"></h1>
+    </div>
+</div>

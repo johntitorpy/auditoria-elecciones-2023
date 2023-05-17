@@ -1,0 +1,31 @@
+    <!doctype html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8" />
+            <title></title>
+            <link rel="stylesheet" type="text/css" href="css/calibrador.css">
+            <script src="js/zaguan.js"></script>
+            <script src="js/helpers.js"></script>
+            <script src="js/calibrador/calibrador.js"></script>
+        </head>
+
+        <body ondragstart="return false" draggable="false"
+        ondragenter="event.dataTransfer.dropEffect='none'; event.stopPropagation(); event.preventDefault();"
+        ondragover="event.dataTransfer.dropEffect='none';event.stopPropagation(); event.preventDefault();"
+        ondrop="event.dataTransfer.dropEffect='none';event.stopPropagation(); event.preventDefault();" >
+            <div class="presentacion">
+                <img class="logo" src="img/logo_votar_grande.png">
+                <div class="titulo"></div>
+            </div>
+
+            <div class="puntos-calibracion">
+                <div class="punto-calibracion punto-tl pendiente" data-x="" data-y=""></div>
+                <div class="punto-calibracion punto-tr pendiente" data-x="" data-y=""></div>
+                <div class="punto-calibracion punto-bl pendiente" data-x="" data-y=""></div>
+                <div class="punto-calibracion punto-br pendiente" data-x="" data-y=""></div>
+                <div class="punto-calibracion punto-c pendiente" data-x="" data-y=""></div>
+            </div>
+
+            <div class="mensaje-estado" id="mensaje_estado"></div>
+        </body>
+    </html>

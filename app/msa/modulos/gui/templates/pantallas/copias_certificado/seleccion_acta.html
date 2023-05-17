@@ -1,0 +1,10 @@
+<main class="seleccion_acta-main">
+	{{#each actas_a_copiar}}
+	<div class="tipo_acta_copia">
+		<div id="svg_certificado_resultados_copia">
+			<img src="img/{{this}}.png" class="tipo_acta_copia-img">
+		</div>
+		<button type="button" class="tipo_acta_copia-button" value="{{this}}">Seleccionar</button>
+	</div>
+	{{/each}}
+</main>

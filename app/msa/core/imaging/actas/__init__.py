@@ -1,0 +1,5 @@
+from msa.core.imaging.actas.acta_recuento_preferencias_paraguay import ActaPreferenciasParaguay
+from msa.core.imaging.actas.acta_recuento_sin_preferencias_paraguay import ActaSinPreferenciasParaguay
+from msa.core.imaging.actas.acta_recuento_sin_preferencias import ActaSinPreferencias
+from msa.core.imaging.actas.acta_prueba_ctx import ImagenActaCTX
+from msa.core.imaging.actas.acta_apertura import ActaApertura
